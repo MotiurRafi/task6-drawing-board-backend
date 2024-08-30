@@ -9,13 +9,13 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
-    origin: 'http://localhost:3000', 
+    origin: 'https://drawing-board-virid.vercel.app', 
     methods: ['GET', 'POST']
   }
 });
 
 app.use(cors({
-  origin: 'http://localhost:3000',
+  origin: 'https://drawing-board-virid.vercel.app',
 }));
 
 app.use(express.json({ limit: '50mb' }));
