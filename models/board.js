@@ -16,10 +16,6 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.TEXT,
       allowNull: true
     },
-    history: {
-      type: DataTypes.TEXT,
-      allowNull: true
-    },
     createdAt: {
       type: DataTypes.DATE,
       allowNull: false,
