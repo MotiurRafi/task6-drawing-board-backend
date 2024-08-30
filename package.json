@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon server.js",
-    "dev": "ts-node server.ts"
+    "postinstall": "npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all"
   },
   "author": "",
   "license": "ISC",
