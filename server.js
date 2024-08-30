@@ -24,11 +24,14 @@ app.use('/api/boards', boardRoutes)
 
 
 io.on('connection', (socket) => {
+  console.log("User Connected")
   socket.on('join-room', (boardId) => {
     socket.join(boardId);
+    console.log("joined Room", boardId)
   });
 
   socket.on('drawing', ({ boardId, canvasData }) => {
+    console.log("broadcasting data from back", canvasData)
     socket.to(boardId).emit('drawing', { boardId, canvasData });
   });
 
